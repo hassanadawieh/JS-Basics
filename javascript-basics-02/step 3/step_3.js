@@ -1,11 +1,13 @@
 
+let div = document.createElement('div');
 
-let x = document.getElementById("name");
+let input = document.querySelector("input");
 
-x.addEventListener("blur", myBlurFunction, true);
+div.innerHtml ="hassan"
 
-function myBlurFunction() {
-  alert("thank you for participating!");
-}
+input.addEventListener("blur", function () {
+div.innerHTML= input.value;
+console.log(input.value)
+});
 
-
+document.body.appendChild(div)
